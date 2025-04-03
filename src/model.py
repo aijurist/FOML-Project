@@ -20,4 +20,3 @@ class PetitionAnalysisOutput(BaseModel):
     # Duplicate Detection
     duplicate_detected: bool = Field(..., description="Indicates if a similar petition exists")
     duplicate_petition_id: Optional[str] = Field(None, description="Reference ID of the duplicate petition")
-

@@ -51,4 +51,5 @@ async def analyze_petition(request: PetitionRequest):
 @app.get("/health")
 async def health_check():
     """Health check endpoint."""
-    return {"status": "healthy"}
+    return {"status": "healthy",
+            "message": "The API is running smoothly."}
