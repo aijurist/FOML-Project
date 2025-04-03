@@ -52,6 +52,3 @@ async def analyze_petition(request: PetitionRequest):
 async def health_check():
     """Health check endpoint."""
     return {"status": "healthy"}
-
-if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
