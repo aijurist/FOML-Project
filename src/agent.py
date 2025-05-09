@@ -5,6 +5,16 @@ from src.gemini import gemini_key, gemini_model
 from src.model import PetitionAnalysisOutput
 
 class PetitionAnalyzer:
+    """Analyzes petitions using a large language model to categorize, prioritize, and recommend actions for the Indian government.
+
+    Attributes:
+        GEMINI_API_KEY(str): API key for accessing the Gemini language model.
+        GEMINI_MODEL(str): Name of the Gemini language model to use.
+        parser(PydanticOutputParser): Parser for structuring the LLM's output into a Pydantic model.
+        prompt(PromptTemplate): Prompt template for instructing the LLM on how to analyze the petition.
+        llm(GoogleGenerativeAI): LLM instance for processing the petition analysis prompt.
+        petition_analysis_chain(LLMChain): Chain combining prompt, LLM, and parser for streamlined petition analysis.
+    """
     def __init__(self):
         self.GEMINI_API_KEY = gemini_key()
         self.GEMINI_MODEL = gemini_model()
